@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>벽초지수목원</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- css -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style2.css">
+    <style>
+    .customoverlay {position:relative;bottom:85px;border-radius:6px;border: 1px solid #ccc;border-bottom:2px solid #ddd;float:left;}
+    .customoverlay:nth-of-type(n) {border:0; box-shadow:0px 1px 2px #888;}
+    .customoverlay a {display:block;text-decoration:none;color:#000;text-align:center;border-radius:6px;font-size:14px;font-weight:bold;overflow:hidden;background: #d95050;background: #d95050 url(https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/arrow_white.png) no-repeat right 14px center;}
+    .customoverlay .sec05-title {display:block;text-align:center;background:#fff;margin-right:35px;padding:10px 15px;font-size:14px;font-weight:bold;}
+    .customoverlay:after {content:'';position:absolute;margin-left:-12px;left:50%;bottom:-12px;width:22px;height:12px;background:url('https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/vertex_white.png')}
+    </style>
+</head>
+<body>
+    <div id="section01">
+        <div class="menu">
+            <div class="menu-inner">
+                <div class="logo"><a href="#section01" class="menu0"><img src="images/logo1.png" alt=""></a></div>
+                <ul>
+                    <li><a href="#section01" class="menu1">메인</a></li>
+                    <li><a href="#section02" class="menu2">소개</a></li>
+                    <li><a href="#section03" class="menu3">관람안내</a></li>
+                    <li><a href="#section04" class="menu4">갤러리</a></li>
+                    <li><a href="#section05" class="menu5">오시는길</a></li>
+                    <li class="g-btn"><button><img src="images/logo1.png" alt=""></button></li>
+                </ul>
+            </div>
+        </div>
+        <div class="title">
+            <p class="small-tit">동서양의 아름다움을 모두 품은 곳</p>
+            <p class="big-tit">벽초지 수목원</p>
+        </div>
+        <div class="scroll-downs">
+            <div class="mouse">
+                <div class="scroller"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 디바이스 크기가 작아지면 메뉴를 토글방식으로 변경
+        $(function(){
+            $(".g-btn").click(function(){
+                $(".menu li a").slideToggle();
+            });
+        });
+
+        /**스크롤이 설정한 높이 이상 내려갔을때 스타일추가하기**/
+        if (jQuery(window).width() > 0) {
+        jQuery(window).on("scroll",function(ev){
+        if(jQuery(window).scrollTop() > 150 ) { /**높이 픽셀 조정**/
+            jQuery('.menu').addClass('fixed');  /**위의 높이에서 .fixed 클래스를 추가합니다. 스타일에서 자유롭게 수치 조절 가능합니다.**/
+        }
+        else{
+			jQuery('.menu').removeClass('fixed');
+        }
+        return false;
+    });
+	}
+        /**마우스 부드럽게 해당위치로 이동**/
+	    $(function(){
+        $(".menu0").click(function(){
+        var offset = $("#section01").offset();
+        $("html,body").animate({scrollTop : offset.top}, 800);
+        });
+        $(".menu1").click(function(){
+            var offset = $("#section01").offset();
+            $("html,body").animate({scrollTop : offset.top}, 800);
+        });
+        $(".menu2").click(function(){
+            var offset = $("#section02").offset();
+            $("html,body").animate({scrollTop : offset.top}, 800);
+        }); 
+        $(".menu3").click(function(){
+            var offset = $("#section03").offset();
+            $("html,body").animate({scrollTop : offset.top}, 800);
+        }); 
+        $(".menu4").click(function(){
+            var offset = $("#section04").offset();
+            $("html,body").animate({scrollTop : offset.top}, 800);
+        }); 
+        $(".menu5").click(function(){
+            var offset = $("#section05").offset();
+            $("html,body").animate({scrollTop : offset.top}, 800);
+        }); 
+    });
+    </script>
+    <!---------------------- section01 end ---------------------->
+
+    <div id="section02">
+        <div class="inner02">
+            <div class="section02-img">
+                <img src="images/section02-img.jpg" alt="">
+            </div>
+            <div class="section02-txt">
+                <p class="name">碧草地  푸른초원</p>
+                <p class="name-txt">자연을 사랑하는 한 사람과,<br>
+                예술을 자연으로 그려내는 한 화가가 만나<br>벽초지수목원의 기나긴 여정이<br> 2005년에 시작되었습니다. <br>
+                벽초지수목원은 한국의 대표 수목원으로서<br>약 1,000종의 식물을 키우며<br>봄,여름,가을,겨울<br>새로운 모습으로 여러분을 맞이합니다.
+                </p>
+            </div>
+    </div>
+    <!---------------------- section02 end ---------------------->
+    <section id="section03">
+        <div class="content">
+            <div class="text">
+                <p class="sec-text">관람안내</p>
+                <p class="bar"></p>
+            </div>
+            <div class="content-box">
+                <div class="container images">
+                    <img src="images/section-03-img1.png" alt="">
+                    <div class="overlay">
+                        <div class="sec03-text">설렘의공간</div>
+                        <p class="sec03-txt">수목원을 들어가면서부터 펼쳐지는 꽃들의 향연<br>흑현무암 화단에 어우러진 교목, 관목들을<br>세계의 꽃들과 함께 계절에 따라<br>색다르게 감상할 수 있는 공간</p>
+                    </div>
+                </div>
+                <div class="container images">
+                    <img src="images/section-03-img2.png" alt="">
+                    <div class="overlay">
+                        <div class="sec03-text">신화의공간</div>
+                        <p class="sec03-txt">웅장한 말리성의 문을 지나면서 시작되는<br>유럽의 영웅들과 신화의 이야기를<br>자연의 이름으로  풀어낸 서양적인 아름다움이<br>깃들어져 있는 공간</p>
+                    </div>
+                </div>
+                <div class="container images">
+                    <img src="images/section-03-img3.png" alt="">
+                    <div class="overlay">
+                        <div class="sec03-text">모험의공간</div>
+                        <p class="sec03-txt">숲과 탐험 그리고 놀이를 주제로 만들어진<br>친환경 자연속 모험공간으로<br>아이들에게 즐거운 자연학습을<br>자연스럽게 익히게 해주고<br>어른들은 동심의 세계로 빠질 수 있는 놀이공간</p>
+                    </div>
+                </div>
+            </div>
+            <div class="content-box">
+                <div class="container images">
+                    <img src="images/section-03-img4.png" alt="">
+                    <div class="overlay">
+                        <div class="sec03-text">자유의공간</div>
+                        <p class="sec03-txt">인류의 평화를 기원하는 뜻에서 만들어진 공간<br>평화의 수도인 파주를 축복하기 위한 곳으로<br>야생화와 관목,교목들이 심겨진 산책로와<br>광활한 잔디광장을 걸을 수 있는 공간</p>
+                    </div>
+                </div>
+                <div class="container images">
+                    <img src="images/section-03-img5.png" alt="">
+                    <div class="overlay">
+                        <div class="sec03-text">사색의공간</div>
+                        <p class="sec03-txt">운치가 있는 나무그늘, 그늘 사이로 드리워진<br>빛줄기, 푸른 이끼 사이로 흘러가는 물,<br>그리고 맑은 공기. 자연이 인간에게 주는<br>소박한 선물들에 취해 바쁜 일상에서 벗어나<br>낭만적인 사색에 잠기는 공간</p>
+                    </div>
+                </div>
+                <div class="container images">
+                    <img src="images/section-03-img6.png" alt="">
+                    <div class="overlay">
+                        <div class="sec03-text">감동의공간</div>
+                        <p class="sec03-txt">비움의 길 끝에 펼쳐지는 벽초지의 감동<br>동양적인 아름다움이 깃들어져 있는 공간으로<br>봄,여름,가을,겨울 새로운 모습들이<br>동양의 '지베르니 정원'이라고 불릴만큼<br>비현실적인 경치를 감상할 수 있는 공간</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!---------------------- section03 end ---------------------->
+    <div id="section04">
+        <div class="text">
+            <p class="sec-text">갤러리</p>
+            <p class="bar"></p>
+            <p class="sub-text">벽초지의 더 많은 모습을 만나보세요</p>
+        </div>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><img src="images/content1.png" alt=""></div>
+              <div class="swiper-slide"><img src="images/content2.png" alt=""></div>
+              <div class="swiper-slide"><img src="images/content3.png" alt=""></div>
+              <div class="swiper-slide"><img src="images/content4.png" alt=""></div>
+              <div class="swiper-slide"><img src="images/content5.png" alt=""></div>
+              <div class="swiper-slide"><img src="images/content6.png" alt=""></div>
+              <div class="swiper-slide"><img src="images/content7.png" alt=""></div>
+            </div>
+            <!-- Add Arrows -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+    </div>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+          loop: true, // 슬라이드 무한 반복
+        });
+      </script>
+    <!---------------------- section04 end ---------------------->
+    <div id="section05">
+        <div class="text">
+            <p class="sec-text">오시는길</p>
+            <p class="bar"></p>
+        </div>
+        <div id="map"></div>
+        <div class="inner05">
+            <div class="subway sbc">
+                <img src="images/subway.png" alt="">
+                <p>지하철 이용시</p>
+                <span class="color">경의중앙선</span><br>
+                <span class="color2">월롱역 1번출구 <br>택시승차 (약 8,000원)</span>
+            </div>
+            <div class="bus sbc">
+                <img src="images/bus.png" alt="">
+                <p>버스 이용시</p>
+                <span class="color3">67번버스 승차 후 벽초지수목원 하차<br>(약 30분 소요)</span>
+            </div>
+            <div class="car sbc">
+                <img src="images/car.png" alt="">
+                <p>자가용 이용시</p>
+                <span>경기도 파주시 광탄면 부흥로 242</span><br>
+                <span>자유로 > 문발IC > 등원교차로 > <br>
+                광탄삼거리 > 방축삼거리 > 벽초지수목원</span><br>
+                <span class="text2">
+                    <img src="images/call.png" alt="" class="call">
+                    031-957-2004
+                </span>
+            </div>
+        </div>
+    </div>
+    <!---------------------- section05 end ---------------------->
+    <footer>
+        <div class="foot-inner">
+            <p class="foot-name">벽초지수목원 byukchoji gardens</p>
+            <p class="address">경기도 파주시 부흥로 242 | Gyeonggi-do, Paju-si, Buheung-ro 242</p>
+            <p class="visit">수목원 문의 | Visitor Info. : 031.957.2004 <br>
+                그린스쿨 문의 | Green School Info. : 031.957.3002</p>
+            <p class="copy">Copyright © byukchoji gardens. All rights reserved.</p>
+        </div>
+    </footer>
+
+
+    <!---------------------- footer end ---------------------->
+    </script>
+    
+    <script type="text/javascript">
+        var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+        mapOption = { 
+            center: new kakao.maps.LatLng(37.801547, 126.874017), // 지도의 중심좌표
+            level: 4 // 지도의 확대 레벨
+        };
+    
+        var map = new kakao.maps.Map(mapContainer, mapOption);
+    
+        var imageSrc = 'images/logo1.png', // 마커이미지의 주소입니다    
+        imageSize = new kakao.maps.Size(30, 50), // 마커이미지의 크기입니다
+        imageOption = {offset: new kakao.maps.Point(16, 65)}; // 마커이미지의 옵션입니다. 마커의 좌표와 일치시킬 이미지 안에서의 좌표를 설정합니다.
+    
+        // 마커의 이미지정보를 가지고 있는 마커이미지를 생성합니다
+        var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize, imageOption),
+        markerPosition = new kakao.maps.LatLng(37.801547, 126.874017); // 마커가 표시될 위치입니다
+    
+        // 마커를 생성합니다
+        var marker = new kakao.maps.Marker({
+        position: markerPosition,
+        image: markerImage // 마커이미지 설정 
+        });
+    
+        // 마커가 지도 위에 표시되도록 설정합니다
+        marker.setMap(map);  
+    
+        // 커스텀 오버레이에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
+        var content = '<div class="customoverlay">' +
+        '  <a href="https://map.kakao.com/?map_type=TYPE_MAP&itemId=7892614" target="_blank">' +
+        '    <span class="sec05-title">벽초지수목원</span>' +
+        '  </a>' +
+        '</div>';
+    
+        // 커스텀 오버레이가 표시될 위치입니다 
+        var position = new kakao.maps.LatLng(37.801547, 126.874017);  
+    
+        // 커스텀 오버레이를 생성합니다
+        var customOverlay = new kakao.maps.CustomOverlay({
+        map: map,
+        position: position,
+        content: content,
+        yAnchor: 1 
+        });
+    </script>
+</body>
+</html>
