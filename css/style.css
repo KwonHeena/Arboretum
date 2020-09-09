@@ -397,12 +397,17 @@ a{
     }
     .overlay{
         width: 100%;
-
+    }
+    .container > img{
+        width: 100%;
     }
 }
 @media(max-width: 414px){
     .content-box{
         padding-top:0;
+    }
+    .sec03-text{
+        padding-top: 15px;
     }
 }
  
