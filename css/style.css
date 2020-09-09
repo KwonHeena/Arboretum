@@ -330,7 +330,7 @@ a{
     margin: 0 auto;
     display: flex;
     justify-content: center;
-    padding-top: 20px;
+    padding-top: 10px;
 }
 .container {
     width: 100%;
@@ -426,7 +426,7 @@ a{
     background-position: top center;
 }
 .swiper-container{
-    width: 80%;
+    width: 70%;
     height: 700px;
     margin-top: 50px;
 }
