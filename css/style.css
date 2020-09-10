@@ -330,10 +330,13 @@ a{
     .section02-txt{
         width: 100%;
         padding: 0;
+        padding-bottom: 50px;
     }
     .inner02{
         flex-direction: column;   
         padding-top: 0;   
+        padding-bottom: 0;
+        height: auto;
     }
 }
 
@@ -449,14 +452,17 @@ a{
         padding-top:0;
     }
     .sec03-text{
-        padding-top: 15px;
+        padding-top: 20px;
         font-size: 25px;
     }
     .sec03-txt{
         font-size: 19px;
     }
     .container img {
-        height: 400px;
+        height: 350px;
+    }
+    .overlay{
+        top: 80%;
     }
 }
  
@@ -560,6 +566,9 @@ footer{
     }
     .visit{
         font-size: 14px;
+    }
+    .copy{
+        line-height: 20px;
     }
 }
 /* <!---------------------- footer end ----------------------> */
