@@ -291,7 +291,7 @@ a{
 }
 @media(max-width:480px){
     #section02{
-        padding: 0 0;
+        padding: 0;
     }
     .name{
         font-size: 25px;
@@ -324,6 +324,11 @@ a{
     }
     .section02-txt{
         width: 100%;
+        padding: 0;
+    }
+    .inner02{
+        flex-direction: column;   
+        padding-top: 0;   
     }
 }
 
@@ -414,7 +419,6 @@ a{
     .overlay{
         top: 83%;
         width: 80%;
-
     }
 }
 @media(max-width: 767px){
@@ -450,6 +454,9 @@ a{
     }
     .sec03-txt{
         font-size: 19px;
+    }
+    .container img {
+        height: 400px;
     }
 }
  
@@ -538,24 +545,15 @@ footer{
 }
 
 @media(max-width:480px){
-    footer{
-        height: 220px;
-
-    }
     .foot-inner{
         width: 90%;
         margin: 0 auto;
-        padding-top: 25px;
     }
 }
 @media(max-width:414px){
-    footer{
-        height: 220px;
-    }
     .foot-inner{
         width: 90%;
         margin: 0 auto;
-        padding-top: 25px;
     }
     .foot-name{
         font-size: 18px;
@@ -702,7 +700,7 @@ footer{
 }
 @media(max-width: 414px){
     #section05{
-        height: auto;
+        padding: 30px 0;
     }
     #map{
         width: 100%;
