@@ -66,7 +66,7 @@ a{
     background-position: top center;
 }
 .title{
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
     text-align: center;
     color: #09662B;
@@ -164,7 +164,12 @@ a{
         margin-left: 48px;
     }
 }
-@media(max-width:480px){
+@media(max-width:625px){
+    li{
+        margin-left: 47px;
+    }
+}
+@media(max-width:500px){
     .g-btn{
         display: block;
     }
@@ -430,18 +435,13 @@ a{
         margin-bottom: 25px;
     }
 }
-@media(max-width: 480px){
-    .content-box{
-        width: 100%;
-    }
-    .container {
-        width: 100%;
-    }
+@media(max-width: 500px){
     .overlay{
         width: 100%;
     }
     .container > img{
         width: 100%;
+        height: 350px;
     }
 }
 @media(max-width: 414px){
@@ -529,7 +529,7 @@ footer{
     letter-spacing: 1px;
 }
 .foot-inner{
-    width: 60%;
+    width: 100%;
     margin: 0 auto;
     padding-top: 10px;
     text-align: center;
@@ -566,7 +566,7 @@ footer{
 
 #section05{
     width:100%;
-    height: 100vh;
+    height: auto;
     background: url(../images/section05-bg.png);
     background-size: cover;
     background-repeat: no-repeat;
@@ -578,6 +578,7 @@ footer{
     justify-content: center;
     text-align: center;
     margin: 0 auto;
+    padding-bottom: 80px;
 }
 .sec-text{
     padding: 50px 0 25px 0;
@@ -644,9 +645,7 @@ footer{
     top: 25px;
 }
 @media(max-width:1119px){
-    #section05{
-        padding: 70px 0;
-    }
+
     #map{
         width: 80%;
     }
@@ -655,10 +654,7 @@ footer{
     }
 }
 @media(max-width: 767px){
-    #section05{
-        height: auto;
-        padding-bottom: 70px;
-    }
+
     .inner05{
         width: 100%;
     }
@@ -673,11 +669,12 @@ footer{
     .sbc span{
         padding: 0 10px;
     }
-
-@media(max-width:480px){
+@media(max-width: 625px){
     #section05{
-        height: 150vh;
+        padding:0;
     }
+}
+@media(max-width:500px){
     #map{
         width: 95%;
         height: 350px;
@@ -699,9 +696,6 @@ footer{
     }
 }
 @media(max-width: 414px){
-    #section05{
-        padding: 30px 0;
-    }
     #map{
         width: 100%;
         height: 350px;
