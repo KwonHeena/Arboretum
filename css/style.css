@@ -443,17 +443,22 @@ a{
         width: 100%;
         height: 350px;
     }
+    .sec03-txt{
+        font-size: 19px;
+    }
+    .sec03-text{
+        font-size: 25px;
+    }
+    .overlay{
+        top: 78%;
+    }
+    .sec03-text{
+        padding-top: 32px;
+    }
 }
 @media(max-width: 414px){
     .content-box{
         padding-top:0;
-    }
-    .sec03-text{
-        padding-top: 25px;
-        font-size: 25px;
-    }
-    .sec03-txt{
-        font-size: 19px;
     }
     .container img {
         height: 350px;
@@ -471,6 +476,11 @@ a{
     background: url(../images/section04-bg.png);
     background-repeat: no-repeat;
     background-size: cover;
+}
+.sub-text{
+    font-size: 23px;
+    color: #fff;
+    padding-top: 20px;
 }
 .swiper-container {
     width: 100%;
@@ -556,6 +566,15 @@ a{
         #section04 .text{
             padding-top: 70px;
         }
+        .swiper-button-prev{
+            height: 25%;
+        }
+        .swiper-button-next{
+            height: 25%;
+        }
+        .sub-text{
+            font-size: 18px;
+        }
     }
   /* <!---------------------- section04 end ----------------------> */
 
@@ -637,11 +656,6 @@ footer{
     border-bottom: 2px solid #fff;
     margin: 0 auto;
 }
-.sub-text{
-    font-size: 23px;
-    color: #fff;
-    padding-top: 20px;
-}
 .text{
     width: 100%;
     text-align: center;
@@ -690,17 +704,15 @@ footer{
     position: relative;
     top: 25px;
 }
+.car span{
+    position: relative;
+    top: 25px;
+}
 @media(max-width:1119px){
-
     #map{
         width: 80%;
     }
-    .sbc{
-        height: auto;
-    }
-}
 @media(max-width: 767px){
-
     .inner05{
         width: 100%;
     }
@@ -739,6 +751,10 @@ footer{
     }
     .sec-text{
         font-size: 25px;
+    }
+    .color{
+        padding: 8px 10px;
+
     }
 }
 @media(max-width: 414px){
