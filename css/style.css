@@ -334,8 +334,8 @@ a{
     }
     .inner02{
         flex-direction: column;   
-        padding-top: 0;   
-        padding-bottom: 0;
+        padding-top: 40px;   
+        padding-bottom: 40px;
         height: auto;
     }
 }
@@ -452,7 +452,7 @@ a{
         padding-top:0;
     }
     .sec03-text{
-        padding-top: 20px;
+        padding-top: 25px;
         font-size: 25px;
     }
     .sec03-txt{
@@ -462,7 +462,8 @@ a{
         height: 350px;
     }
     .overlay{
-        top: 80%;
+        top: 82%;
+        height: 60px;
     }
 }
  
