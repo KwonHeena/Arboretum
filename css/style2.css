@@ -5,10 +5,9 @@
     font-weight: normal;
     font-style: normal;
 }
-
 html,body{
     font-family: 'MapoFlowerIsland';
-}
+}         
 
 li{
     margin-left: 50px;
@@ -74,11 +73,11 @@ a{
     top: 270px;
 }
 .small-tit{
-    font-size: 34px;
-    padding-bottom: 10px;
+    font-size: 28px;
+    padding-bottom: 30px;
 }
 .big-tit{
-    font-size: 60px;
+    font-size: 70px;
 }
 .g-btn{
     display: none;
@@ -159,11 +158,6 @@ a{
         width: 100%;
     }
 }
-@media(max-width:638px){
-    li{
-        margin-left: 48px;
-    }
-}
 @media(max-width:480px){
     .g-btn{
         display: block;
@@ -240,29 +234,17 @@ a{
 }
 .name{
     font-size: 32px;
-    padding-bottom: 20px;
+    padding-bottom: 50px;
 }
 .name-txt{
     font-size: 25px;
-    line-height: 35px;
+    line-height: 40px;
 }
 .section02-txt{
     width: 500px;
     padding-left: 60px;
 }
-@media(max-width:1119px){
-    #section02{
-       padding: 100px 0;
-    }
-    .inner02{
-       flex-direction: column;
-       padding-bottom: 50px;
-    }
-    .section02-txt{
-        padding-top: 30px;
-        padding-left: 0px;
-    }
-}
+
 @media(max-width:767px){
     #section02{
         background-position: center;
@@ -350,25 +332,20 @@ a{
     padding-top: 10px;
 }
 .container {
-    width: 100%;
+    width: 650px;
     position: relative;
     overflow: hidden;
     text-align: center;
-    margin: 10px;
-}
-.container img {
-    width: 100%;
 }
 .sec03-text{
     color: #000;
-    font-size: 35px;
+    font-size: 30px;
     position:absolute;
     top: 25%;
     left: 50%;
+    padding-top: 35px;
     -webkit-transform: translate(-50%,-50%);
-    text-align: center;
     opacity: 1;
-    padding-top: 5%;
 }
 .sec03-txt{
     color: #000;
@@ -382,14 +359,15 @@ a{
 }
 .overlay{
     position:absolute;
-    top: 81%;
+    top: 80%;
     left: 0;
     right: 0;
     background-color: rgba(255, 255, 255, 0.8);
-    width: 100%;
-    height: 75px;
+    width: 550px;
+    height: 77px;
     transition: 1s;
     margin: 0 auto;
+    text-align: center;
 }
 
 .container:hover .overlay{
@@ -399,27 +377,10 @@ a{
 .container:hover .sec03-txt{
     display: block;
 }
-@media(max-width:1119px){
-    .content-box{
-        width: 90%;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin: 0 auto;
-    }
-    .container img {
-        width: 80%;
-        height: 450px;
-    }
-    .overlay{
-        top: 83%;
-        width: 80%;
 
-    }
-}
 @media(max-width: 767px){
     .content-box{
-        width: 100%;
+        width: 80%;
         flex-direction: column;
     }
     .images{
@@ -473,15 +434,10 @@ a{
     width: 100%;
     height: 100%;
 }
-@media(max-width:1119px){
-    .swiper-container{
-        width: 90%;
-        height: 600px;
-    }
-    .swiper-container{
-        margin-top: 30px;
-    }
+.swiper-button-next,.swiper-button-prev{
+    color: #ccc;
 }
+
 @media(max-width:767px){
     #section04{
         height: auto;
@@ -516,32 +472,27 @@ a{
 
 footer{
     width: 100%;
-    height: 120px;
+    height: 110px;
     background-color: #e5e5e5;
-    color: #333;
+    color: #000;
     letter-spacing: 1px;
 }
 .foot-inner{
-    width: 60%;
+    width: 80%;
     margin: 0 auto;
-    padding-top: 10px;
-    text-align: center;
-}
-.foot-name{
-    font-weight: bold;
-    font-size: 20px;
-    padding-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 .visit{
-    padding: 10px 0;
+    padding: 15px 0;
     line-height: 23px;
 }
-
+.copy{
+    font-weight: bold;
+}
 @media(max-width:480px){
-    footer{
-        height: 220px;
-
-    }
     .foot-inner{
         width: 90%;
         margin: 0 auto;
@@ -549,16 +500,10 @@ footer{
     }
 }
 @media(max-width:414px){
-    footer{
-        height: 220px;
-    }
     .foot-inner{
         width: 90%;
         margin: 0 auto;
         padding-top: 25px;
-    }
-    .foot-name{
-        font-size: 18px;
     }
     .visit{
         font-size: 14px;
@@ -568,18 +513,19 @@ footer{
 
 #section05{
     width:100%;
-    height: 100vh;
+    height:auto;
+    padding-top: 70px;
     background: url(../images/section05-bg.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top center;
 }
 .inner05{
-    width: 80%;
+    width: 100%;
+    height: 800px;
     display: flex;
     justify-content: center;
     text-align: center;
-    margin: 0 auto;
 }
 .sec-text{
     padding: 50px 0 25px 0;
@@ -601,75 +547,63 @@ footer{
     width: 100%;
     text-align: center;
 }
-#map{
-	width: 60%;
-    height: 500px;
+.inner05{
+    width: 70%;
+    display: flex;
+    align-items: center;
     margin: 0 auto;
-    margin-top: 35px;
 }
-.sbc{
-    width: 368px;
-    height: 230px;
-    background-color: rgba(255, 255, 255, 0.6);
-    margin: 20px 10px 0 10px; 
-    line-height: 22px;
-    font-weight: bold;
+#map{
+	width: 80%;
+    height: 550px;
 }
-.sbc p{
-    font-size: 20px;
-    margin-bottom: 10px;
+.tab_wrap{
+    width: 30%;
+    height: 400px;
+    text-align: center;
 }
-.inner05 img{
-    width: 30px;
-    margin: 20px 0 10px 0;
-}
-.car .call{
-    width: 15px;
-    vertical-align: middle;
-    margin-bottom: 20px;
-}
-.color{
-	background-color: #53c7da;
-	border-radius: 40px;
-    padding: 4px 10px;
-	font-size: 15px;
-	color: #fff;
-    letter-spacing: 1px;
-    font-weight: normal;
-}
-.sbc .color2{
-    position: relative;
-    top: 12px;
-}
-.sbc .color3{
-    position: relative;
-    top: 25px;
-}
-@media(max-width:1119px){
-    #section05{
-        padding: 70px 0;
-    }
-    #map{
-        width: 80%;
-    }
-    .sbc{
-        height: auto;
-    }
+.tab_menu_container button {
+    background:none;
+    border:0;
+    outline:0;
+    cursor:pointer;
+  }
+  .tab_menu_container {
+    display:flex;
+    margin-left: 70px;
+  }
+  .tab_menu_btn {
+    width:100%;
+    height:40px;
+    transition:0.3s all;
+  }
+  .tab_menu_btn.on {
+    border-bottom:2px solid #df0000;
+    font-weight:700;
+    color:#df0000;
+  }
+  .tab_menu_btn:hover {
+    color:#df0000;
+  }
+  .tab_box {
+    display:none;
+    padding:20px;
+  }
+  .tab_box.on {
+    display:block;
 }
 @media(max-width: 767px){
     #section05{
         height: auto;
         padding-bottom: 70px;
     }
-    .inner05{
-        width: 100%;
-    }
     #map{
         width: 98%;
         margin-top: 35px;
     }
     .sbc{
-        width: 33%;
+        width: 250px;
+        height: 260px;
         margin: 20px 5px 0 5px; 
     }
     .sbc span{
@@ -718,4 +652,4 @@ footer{
         margin-top: 20px;
     }
 }
-/* <!---------------------- section05 end ----------------------> */d
+/* <!---------------------- section05 end ----------------------> */
