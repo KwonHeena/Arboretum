@@ -558,6 +558,9 @@ footer{
     }
 }
 @media(max-width:414px){
+    footer{
+        height: auto;
+    }
     .foot-inner{
         width: 90%;
         margin: 0 auto;
@@ -570,6 +573,7 @@ footer{
     }
     .copy{
         line-height: 20px;
+        padding-bottom: 10px;
     }
 }
 /* <!---------------------- footer end ----------------------> */
