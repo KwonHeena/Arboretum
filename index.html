@@ -179,28 +179,53 @@
         <p class="bar"></p>
         <p class="sub-text">벽초지의 더 많은 모습을 만나보세요</p>
     </div>
-    <div class="swiper-container">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide"><img src="images/content1.png" alt=""></div>
-          <div class="swiper-slide"><img src="images/content2.png" alt=""></div>
-          <div class="swiper-slide"><img src="images/content3.png" alt=""></div>
-          <div class="swiper-slide"><img src="images/content4.png" alt=""></div>
-          <div class="swiper-slide"><img src="images/content5.png" alt=""></div>
-          <div class="swiper-slide"><img src="images/content6.png" alt=""></div>
-          <div class="swiper-slide"><img src="images/content7.png" alt=""></div>
-        </div>
-        <!-- Add Arrows -->
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-      </div>
-</div>
-<script>
-    var swiper = new Swiper('.swiper-container', {
+    <!-- Swiper -->
+  <div class="swiper-container gallery-top">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide" style="background-image:url(images/content1.png)"></div>
+      <div class="swiper-slide" style="background-image:url(images/content2.png)"></div>
+      <div class="swiper-slide" style="background-image:url(images/content3.png)"></div>
+      <div class="swiper-slide" style="background-image:url(images/content4.png)"></div>
+      <div class="swiper-slide" style="background-image:url(images/content5.png)"></div>
+      <div class="swiper-slide" style="background-image:url(images/content6.png)"></div>
+      <div class="swiper-slide" style="background-image:url(images/content7.png)"></div>
+    </div>
+    <!-- Add Arrows -->
+    <div class="swiper-button-next swiper-button-white"></div>
+    <div class="swiper-button-prev swiper-button-white"></div>
+  </div>
+  <div class="swiper-container gallery-thumbs">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide" style="background-image:url(images/content1.png)"></div>
+        <div class="swiper-slide" style="background-image:url(images/content2.png)"></div>
+        <div class="swiper-slide" style="background-image:url(images/content3.png)"></div>
+        <div class="swiper-slide" style="background-image:url(images/content4.png)"></div>
+        <div class="swiper-slide" style="background-image:url(images/content5.png)"></div>
+        <div class="swiper-slide" style="background-image:url(images/content6.png)"></div>
+        <div class="swiper-slide" style="background-image:url(images/content7.png)"></div>
+    </div>
+  </div>
+  <script>
+    var galleryThumbs = new Swiper('.gallery-thumbs', {
+      spaceBetween: 10,
+      slidesPerView: 4,
+      loop: true,
+      freeMode: true,
+      loopedSlides: 5, //looped slides should be the same
+      watchSlidesVisibility: true,
+      watchSlidesProgress: true,
+    });
+    var galleryTop = new Swiper('.gallery-top', {
+      spaceBetween: 10,
+      loop: true,
+      loopedSlides: 5, //looped slides should be the same
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
       },
-      loop: true, // 슬라이드 무한 반복
+      thumbs: {
+        swiper: galleryThumbs,
+      },
     });
   </script>
 <!---------------------- section04 end ---------------------->
