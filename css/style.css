@@ -8,8 +8,8 @@
 
 html,body{
     font-family: 'MapoFlowerIsland';
+    height: 100%;
 }
-
 li{
     margin-left: 50px;
 }
@@ -226,7 +226,6 @@ a{
 }
 /* <!---------------------- section01 end ----------------------> */
 
-
 #section02{
     width: 100%;
     height: 100vh;
@@ -341,8 +340,6 @@ a{
 }
 
 /* <!---------------------- section02 end ----------------------> */
-
-
 #section03{
     width:100%;
     height: auto;
@@ -466,24 +463,29 @@ a{
         height: 60px;
     }
 }
- 
-
 /* <!---------------------- section03 end ----------------------> */
+
 #section04{
-    width:100%;
-    height: 100vh;
-    padding-bottom: 100px;
+    width: 100%;
+    height: 100%;
     background: url(../images/section04-bg.png);
-    background-size: cover;
     background-repeat: no-repeat;
-    background-position: top center;
+    background-size: cover;
 }
 .swiper-container {
     width: 100%;
     height: 300px;
     margin-left: auto;
     margin-right: auto;
-  }
+    padding-top: 30px;
+}
+.swiper-container  .swiper-wrapper .swiper-slide{
+    width: 60%;
+    height: 100%;
+}
+.gallery-top .swiper-wrapper {
+    height: 95%;
+}
 
   .swiper-slide {
     background-size: cover;
@@ -491,34 +493,72 @@ a{
   }
 
   .gallery-top {
-    height: 70%;
+    height: 65%;
     width: 70%;
-  }
-  .gallery-top .swiper-wrapper .swiper-slide{
-      width: 80%;
-      background-size: cover;
-      background-repeat: no-repeat;
   }
 
   .gallery-thumbs {
     width: 70%;
-    height: 20%;
+    height: 15%;
     box-sizing: border-box;
-    padding: 10px 0;
+    padding: 0;
+    padding-bottom: 30px;
   }
 
   .gallery-thumbs .swiper-slide {
-    width: 20%;
-    height: 80%;
+    width: 25%;
+    height: 100%;
     opacity: 0.4;
-    background-size: cover;
-    background-repeat: no-repeat;
   }
 
   .gallery-thumbs .swiper-slide-thumb-active {
     opacity: 1;
   }
-/* <!---------------------- section04 end ----------------------> */
+
+    @media(max-width:1119px){
+        .gallery-top {
+            width: 80%;
+            height: 60%;
+        }
+        .gallery-thumbs {
+            width: 80%;
+            height: 18%;
+        }
+    }
+    @media(max-width: 767px){
+        .gallery-top {
+            width: 98%;
+            height: 50%;
+            padding-top: 100px;
+        }
+        .gallery-thumbs {
+            width: 98%;
+            height: 15%;
+        }
+        .swiper-button-prev{
+            height: 20%;
+        }
+        .swiper-button-next{
+            height: 20%;
+        }
+    }
+    @media(max-width: 500px){
+        #section04{
+            height: 85%;
+        }
+        .gallery-top {
+            width: 100%;
+            height: 40%;
+        }
+        .gallery-thumbs {
+            width: 100%;
+        }
+        #section04 .text{
+            padding-top: 70px;
+        }
+    }
+  /* <!---------------------- section04 end ----------------------> */
+
 
 footer{
     width: 100%;
@@ -570,7 +610,7 @@ footer{
 }
 /* <!---------------------- footer end ----------------------> */
 
-#section05{
+  #section05{
     width:100%;
     height: auto;
     background: url(../images/section05-bg.png);
