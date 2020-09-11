@@ -439,6 +439,50 @@ a{
 .container:hover .sec03-txt{
     display: block;
 }
+@media(max-width:1570px){
+    .sec03-text{
+        font-size: 28px;
+        padding-top: 4%;
+    }
+    .sec03-txt{
+        font-size: 20px;
+        line-height: 25px;
+    }
+}
+@media(max-width:1470px){
+    .sec03-text{
+        font-size: 28px;
+        padding-top: 4%;
+    }
+    .sec03-txt{
+        font-size: 20px;
+        line-height: 25px;
+    }
+}
+@media(max-width:1343px){
+    .sec03-text{
+        font-size: 25px;
+    }
+    .sec03-txt{
+        font-size: 18px;
+        line-height: 25px;
+    }
+}
+@media(max-width:1222px){
+    .sec03-text{
+        font-size: 23px;
+        padding-top: 3%;
+    }
+    .sec03-txt{
+        font-size: 16px;
+        line-height: 20px;
+    }
+}
+@media(max-width:1125px){
+    .sec03-txt{
+        font-size: 15px;
+    }
+}
 @media(max-width:1119px){
     .content-box{
         width: 90%;
@@ -459,6 +503,14 @@ a{
         top: 0;
         height: 99.5%;
     }
+    .sec03-text{
+        font-size: 35px;
+        padding-top: 5%;
+    }
+    .sec03-txt{
+        font-size: 22px;
+        line-height: 32px;
+    }
 }
 @media(max-width: 767px){
     .content-box{
@@ -467,6 +519,15 @@ a{
     }
     .images{
         margin-bottom: 25px;
+    }
+}
+@media(max-width: 552px){
+    .sec03-txt{
+        font-size: 19px;
+    }
+    .sec03-text{
+        font-size: 25px;
+        padding-top: 8%;
     }
 }
 @media(max-width: 500px){
@@ -482,12 +543,10 @@ a{
     }
     .sec03-text{
         font-size: 25px;
+        padding-top: 7%;
     }
     .overlay{
         top: 78%;
-    }
-    .sec03-text{
-        padding-top: 32px;
     }
 }
 @media(max-width: 414px){
@@ -702,7 +761,7 @@ footer{
 }
 .sbc{
     width: 368px;
-    height: 230px;
+    height: 200px;
     background-color: rgba(255, 255, 255, 0.6);
     margin: 20px 10px 0 10px; 
     line-height: 22px;
@@ -712,14 +771,34 @@ footer{
     font-size: 20px;
     margin-bottom: 10px;
 }
-.inner05 img{
-    width: 30px;
-    margin: 20px 0 10px 0;
+.xi-subway{
+    font-size: 30px;
+    padding-top: 25px;
 }
-.car .call{
-    width: 15px;
-    vertical-align: middle;
-    margin-bottom: 20px;
+.xi-bus{
+    font-size: 30px;
+    padding-top: 25px;
+}
+.xi-car{
+    font-size: 30px;
+}
+.xi-call{
+    font-size: 20px;
+}
+.car-text{
+    margin-top: 30px;
+}
+.text2{
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+}
+.call{
+    margin-top: 23px;
+    margin-left: 10px;
+}
+.sbc .call{
+    font-size: 16px;
 }
 .color{
 	background-color: #53c7da;
@@ -754,16 +833,31 @@ footer{
         width: 98%;
         margin-top: 35px;
     }
-    .sbc{
-        width: 33%;
-        margin: 20px 5px 0 5px; 
-    }
-    .sbc span{
-        padding: 0 10px;
-    }
 @media(max-width: 625px){
     #section05{
         padding:0;
+    }
+    .sbc p{
+        font-size: 16px;
+    }
+    .color,.color2,.color3{
+        font-size: 13px;
+    }
+    .sbc .call{
+        font-size: 13px;
+    }
+    .xi-subway{
+        font-size: 20px;
+    }
+    .xi-bus{
+        font-size: 20px;
+    }
+    .xi-car{
+        font-size: 20px;
+    }
+    .xi-call{
+        font-size: 15px;
+        margin-top: 2px;
     }
 }
 @media(max-width:500px){
@@ -778,17 +872,31 @@ footer{
         width: 450px;
         height: 220px;
         margin: 0 auto;
-        margin-bottom: 15px;
-    }
-    .subway{
         margin-top: 20px;
     }
-    .sec-text{
-        font-size: 25px;
+    .xi-subway{
+        font-size: 30px;
+        padding-top: 25px;
     }
-    .color{
-        padding: 8px 10px;
-
+    .xi-bus{
+        font-size: 30px;
+        padding-top: 25px;
+    }
+    .xi-car{
+        font-size: 30px;
+    }
+    .xi-call{
+        font-size: 20px;
+        margin-top: 0;
+    }
+    .sbc p{
+        font-size: 20px;
+    }
+    .color,.color2,.color3{
+        font-size: 18px;
+    }
+    .sbc .call{
+        font-size: 18px;
     }
 }
 @media(max-width: 414px){
