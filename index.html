@@ -12,6 +12,8 @@
     <!-- wow css -->
     <script src="js/wow.min.js"></script>
     <link rel="stylesheet" href="css/animate.css">
+    <!-- modal css -->
+    <script src=js/modal.js></script>
     <!-- EXicon -->
     <link rel="stylesheet" href="http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
     <!-- css -->
@@ -103,16 +105,17 @@
     <!-- section02 -->
     <div id="section02">
         <div class="inner02">
-            <div class="section02-img wow slideInLeft" data-wow-duration="2s">
+            <div class="section02-img wow slideInLeft" data-wow-duration="2s" data-wow-offset="100">
                 <img src="images/section02-img.jpg" alt="">
             </div>
-            <div class="section02-txt wow slideInRight" data-wow-duration="1s">
+            <div class="section02-txt wow slideInRight" data-wow-duration="2s" data-wow-offset="200">
                 <p class="name">碧草地  푸른초원</p>
                 <p class="name-txt">자연을 사랑하는 한 사람과,<br>
                 예술을 자연으로 그려내는 한 화가가 만나<br>벽초지수목원의 기나긴 여정이<br> 2005년에 시작되었습니다. <br>
                 벽초지수목원은 한국의 대표 수목원으로서<br>약 1,000종의 식물을 키우며<br>봄,여름,가을,겨울<br>새로운 모습으로 여러분을 맞이합니다.
                 </p>
             </div>
+        </div>
     </div>
 <script>
      new WOW().init();
@@ -174,60 +177,125 @@
 </div>
 
 <!---------------------- section03 end ---------------------->
-    <div id="section04">
-        <div class="text">
-            <p class="sec-text">갤러리</p>
-            <p class="bar"></p>
-            <p class="sub-text">벽초지의 더 많은 모습을 만나보세요</p>
-        </div>
-        <div class="swiper-container gallery-top">
-            <div class="swiper-wrapper">
-            <div class="swiper-slide" style="background-image:url(images/content1.png)"></div>
-            <div class="swiper-slide" style="background-image:url(images/content2.png)"></div>
-            <div class="swiper-slide" style="background-image:url(images/content3.png)"></div>
-            <div class="swiper-slide" style="background-image:url(images/content4.png)"></div>
-            <div class="swiper-slide" style="background-image:url(images/content5.png)"></div>
-            <div class="swiper-slide" style="background-image:url(images/content6.png)"></div>
-            <div class="swiper-slide" style="background-image:url(images/content7.png)"></div>
-            </div>
-            <!-- Add Arrows -->
-            <div class="swiper-button-next swiper-button-white"></div>
-            <div class="swiper-button-prev swiper-button-white"></div>
-        </div>
-        <div class="swiper-container gallery-thumbs">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide" style="background-image:url(images/content1.png)"></div>
-                <div class="swiper-slide" style="background-image:url(images/content2.png)"></div>
-                <div class="swiper-slide" style="background-image:url(images/content3.png)"></div>
-                <div class="swiper-slide" style="background-image:url(images/content4.png)"></div>
-                <div class="swiper-slide" style="background-image:url(images/content5.png)"></div>
-                <div class="swiper-slide" style="background-image:url(images/content6.png)"></div>
-                <div class="swiper-slide" style="background-image:url(images/content7.png)"></div>
-            </div>
-        </div>
+<div id="section04">
+    <div class="text">
+        <p class="sec-text">갤러리</p>
+        <p class="bar"></p>
+        <p class="sub-text">벽초지의 더 많은 모습을 만나보세요</p>
     </div>
-    <script>
-        var galleryThumbs = new Swiper('.gallery-thumbs', {
-          spaceBetween: 10,
-          slidesPerView: 4,
-          freeMode: true,
-          watchSlidesVisibility: true,
-          watchSlidesProgress: true,
-        });
-        var galleryTop = new Swiper('.gallery-top', {
-          spaceBetween: 10,
-          navigation: {
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+        <div class="swiper-slide"><a href="javascript:openModal('modal1');" class="button modal-open"><img src="images/content1.jpg" alt=""></a></div>
+        <div class="swiper-slide"><a href="javascript:openModal('modal2');" class="button modal-open"><img src="images/content2.jpg" alt=""></a></div>
+        <div class="swiper-slide"><a href="javascript:openModal('modal3');" class="button modal-open"><img src="images/content3.jpg" alt=""></a></div>
+        <div class="swiper-slide"><a href="javascript:openModal('modal4');" class="button modal-open"><img src="images/content4.jpg" alt=""></a></div>
+        <div class="swiper-slide"><a href="javascript:openModal('modal5');" class="button modal-open"><img src="images/content5.jpg" alt=""></a></div>
+        <div class="swiper-slide"><a href="javascript:openModal('modal6');" class="button modal-open"><img src="images/content6.jpg" alt=""></a></div>
+        <div class="swiper-slide"><a href="javascript:openModal('modal7');" class="button modal-open"><img src="images/content7.jpg" alt=""></a></div>
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+    <!-- Add Arrows -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+</div>
+<script>
+    var appendNumber = 4;
+    var prependNumber = 1;
+    var swiper = new Swiper('.swiper-container', {
+        slidesPerView: 3,
+        centeredSlides: true,
+        spaceBetween: 30,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
-          },
-          thumbs: {
-            swiper: galleryThumbs
-          },
-          loop:true,
-          loopAdditionalSlides: 1
+        },
+    });
+    document.querySelector('.prepend-2-slides').addEventListener('click', function (e) {
+        e.preventDefault();
+        swiper.prependSlide([
+        '<div class="swiper-slide">Slide ' + (--prependNumber) + '</div>',
+        '<div class="swiper-slide">Slide ' + (--prependNumber) + '</div>'
+        ]);
+    });
+    document.querySelector('.prepend-slide').addEventListener('click', function (e) {
+        e.preventDefault();
+        swiper.prependSlide('<div class="swiper-slide">Slide ' + (--prependNumber) + '</div>');
         });
-      </script>
-
+        document.querySelector('.append-slide').addEventListener('click', function (e) {
+            e.preventDefault();
+            swiper.appendSlide('<div class="swiper-slide">Slide ' + (++appendNumber) + '</div>');
+        });
+        document.querySelector('.append-2-slides').addEventListener('click', function (e) {
+            e.preventDefault();
+            swiper.appendSlide([
+                '<div class="swiper-slide">Slide ' + (++appendNumber) + '</div>',
+                '<div class="swiper-slide">Slide ' + (++appendNumber) + '</div>'
+        ]);
+    });
+</script>
+<div id="modal">
+    <div class="modal-con modal1">
+        <a href="javascript:;" class="close xi-close-square-o"></a>
+        <div class="con">
+            <img src="images/content1.jpg" alt="">
+        </div>
+    </div>
+    <div class="modal-con modal2">
+        <a href="javascript:;" class="close xi-close-square-o"></a>
+        <div class="con">
+            <img src="images/content2.jpg" alt="">
+        </div>
+    </div>
+    <div class="modal-con modal3">
+        <a href="javascript:;" class="close xi-close-square-o"></a>
+        <div class="con">
+            <img src="images/content3.jpg" alt="">
+        </div>
+    </div>
+    <div class="modal-con modal4">
+        <a href="javascript:;" class="close xi-close-square-o"></a>
+        <div class="con">
+            <img src="images/content4.jpg" alt="">
+        </div>
+    </div>
+    <div class="modal-con modal5">
+        <a href="javascript:;" class="close xi-close-square-o"></a>
+        <div class="con">
+            <img src="images/content5.jpg" alt="">
+        </div>
+    </div>
+    <div class="modal-con modal6">
+        <a href="javascript:;" class="close xi-close-square-o"></a>
+        <div class="con">
+            <img src="images/content6.jpg" alt="">
+        </div>
+    </div>
+    <div class="modal-con modal7">
+        <a href="javascript:;" class="close xi-close-square-o"></a>
+        <div class="con">
+            <img src="images/content7.jpg" alt="">
+        </div>
+    </div>
+</div>
+       
+        <script>
+                function openModal(modalname){
+                 document.get
+                $("#modal").fadeIn(300);
+                $("."+modalname).fadeIn(300);
+                }
+    
+                $("#modal, .close").on('click',function(){
+                $("#modal").fadeOut(300);
+                $(".modal-con").fadeOut(300);
+                });
+            </script>
+    
       <!---------------------- section04 end ---------------------->
 
       <div id="section05">

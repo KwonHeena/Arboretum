@@ -1,0 +1,256 @@
+@font-face {
+    font-family: 'MapoFlowerIsland';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/MapoFlowerIslandA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html,body{
+    font-family: 'MapoFlowerIsland';
+    height: 100%;
+}
+li{
+    margin-left: 50px;
+}
+a{
+    font-weight: bold;
+}
+.menu ul{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.menu{
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    transition:all 0.5s ease-in-out;
+    -webkit-transition:all 0.5s ease-in-out;
+    z-index: 99;
+}
+.fixed{
+    background-color: rgba(255, 255, 255, 0.6); transition:all 0.5s ease-in-out; -webkit-transition:all 0.5s ease-in-out;}
+.menu-inner{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+}
+.logo a img{
+    width: 35px;
+    margin-top: 3px;
+}
+
+.menu-inner li a:hover{
+    color: olive;}
+.menu-inner li:nth-child(2) a:hover{
+    color: olive;}
+
+.menu-inner li:nth-child(3) a:hover{
+    color: olive;}
+
+.menu-inner li:nth-child(4) a:hover{
+    color: olive;}
+
+.menu-inner li:nth-child(5) a:hover{
+    color: olive;}
+/* ---------------menu--------------- */
+
+#section01{
+    width:100%;
+    height: 100vh;
+    background: url(../images/main.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+.title{
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    color: #09662B;
+    position: relative;
+    top: 270px;
+}
+.small-tit{
+    font-size: 34px;
+    padding-bottom: 10px;
+}
+.big-tit{
+    font-size: 60px;
+}
+.g-btn{
+    display: none;
+}
+.scroll-downs{
+	position: relative;
+	top: 78vh;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: 0 auto;
+	width: 30px;
+	height: 20px;
+}
+.mouse{
+	width: 3px;
+	padding: 6px 10px;
+	height: 30px;
+	border: 2px solid #fff;
+	box-sizing: content-box;
+	border-radius: 45px;
+}
+.scroller{
+	width: 3px;
+	height: 10px;
+	border-radius: 30%;
+	background-color: #fff;
+	animation-name: scroll;
+	animation-duration: 2.2s;
+	animation-timing-function: cubic-bezier(.15, .41, .69, .94);
+	animation-iteration-count: infinite;
+}
+@keyframes scroll {
+	0% {
+		opacity: 0;
+	}
+	10% {
+		transform: translateY(0);
+		opacity: 1;
+	}
+	100%{
+		transform: translateY(15px);
+		opacity: 0;
+	}
+}
+@keyframes downup{
+	0% {
+		opacity: 0;
+		transform: translateY(0, 100px);
+	}
+	100% {
+		opacity: 1;
+		transform: translate(0, 0);
+	}
+}
+@keyframes bounce{
+	from,
+	to{
+		margin-bottom: 0;
+		-moz-animation-timing-function: ease-out;
+	}
+
+	50%{
+		margin-bottom: 8px;
+		-moz-animation-timing-function: ease-in;
+	}
+}
+
+
+@media(max-width:768px){
+    .small-tit{
+        font-size: 27px;
+    }
+    .big-tit{
+        font-size: 58px;
+    }
+    .menu ul{
+        width: 100%;
+    }
+}
+@media(max-width:655px){
+    li{
+        margin-left: 45px;
+    }
+}
+@media(max-width:638px){
+    li{
+        margin-left: 40px;
+    }
+}
+@media(max-width:592px){
+    li{
+        margin-left: 39px;
+    }
+}
+@media(max-width:586px){
+    li{
+        margin-left: 35px;
+    }
+}
+@media(max-width:561px){
+    li{
+        margin-left: 33px;
+    }
+}
+@media(max-width:548px){
+    li{
+        margin-left: 30px;
+    }
+}
+@media(max-width:531px){
+    li{
+        margin-left: 27px;
+    }
+}
+@media(max-width:511px){
+    li{
+        margin-left: 25px;
+    }
+}
+@media(max-width:500px){
+    .g-btn{
+        display: block;
+    }
+    .g-btn button{
+        border: none;
+        background: none;
+    }
+    .g-btn img{
+        width: 20px;
+        position: relative;
+        left: 25px;
+        top: 3px;
+    }
+    .logo{
+        display: none;
+    }
+    .menu{
+        height: 50px;
+    }
+    .menu-inner ul {
+        width: 100%;
+    }
+    li{
+        margin-left: 10px;
+        margin-right: 9px;
+    }
+    .menu a {
+        display: none;
+    }
+    .title{
+        top: 280px;
+    }
+    .small-tit{
+        font-size: 23px;
+    }
+    .big-tit{
+        font-size: 40px;
+    }
+}
+@media(max-width:414px){
+    li{
+        margin-left: 6px;
+        margin-right: 6px;
+    }
+    .title{
+        top: 230px;
+    }
+    .small-tit{
+        font-size: 20px;
+    }
+    .big-tit{
+        font-size: 40px;
+    }
+}
+/* <!---------------------- section01 end ----------------------> */
