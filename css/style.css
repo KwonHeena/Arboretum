@@ -781,13 +781,24 @@ a{
     }
   }
   @media(max-width:414px){
+    .swiper-slide{
+        height: 90%;
+    }
+    .modal-open{
+        height: 100%;
+    }
     .swiper-slide img{
         width: 100%;
-        height: 90%;
+        height: 100%;
         background-size: contain;
         background-color: rgba(0, 0, 0, 1);
     }
-
+    .swiper-button-prev,.swiper-button-next{
+        top: 47%;
+    }
+    .swiper-pagination{
+        margin-bottom: 5%;
+    }
   }
 
   /* <!---------------------- section04 end ----------------------> */
