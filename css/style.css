@@ -323,7 +323,7 @@ a{
         padding-bottom: 300px;
     }
 }
-@media(max-width:480px){
+@media(max-width: 500px){
     #section02{
         padding: 0;
     }
@@ -344,6 +344,27 @@ a{
         width: 85%;
     }
 }
+@media(max-width:480px){
+    #section02{
+        padding: 0;
+    }
+    .name{
+        font-size: 25px;
+        margin-top: 20px;
+    }
+    .name-txt{
+        font-size: 18px;
+        line-height: 27px;
+    }
+    .section02-img img{
+        width: 400px;
+        margin-top: 70px;
+    }
+    .section02-txt{
+        padding-bottom: 0px;
+        width: 85%;
+    }
+}
 
 @media(max-width:414px){
     .name{
@@ -359,12 +380,12 @@ a{
     .section02-txt{
         width: 100%;
         padding: 0;
-        padding-bottom: 50px;
+        padding-bottom: -20px;
     }
     .inner02{
         flex-direction: column;   
-        padding-top: 40px;   
-        padding-bottom: 60px;
+        padding-top: 20px;   
+        padding-bottom: 40px;
         height: auto;
     }
 }
@@ -694,11 +715,12 @@ a{
     background:#fff;
   }
   .modal-con .con img{
-      width: 100%;
+      width: 98%;
   }
   .modal-con .con{
-    font-size:15px; line-height:1.3;
-    padding: 10px;
+    width: 100%;
+    font-size:15px;
+    padding: 9px;
   }
   .modal-con .close{
     display:block;
@@ -713,6 +735,7 @@ a{
   .modal-con .xi-close-square-o{
       font-size: 30px;
       color: #fff;
+      margin: 10px 20px 0 0;
   }
 
   @media(max-width:1119px){
