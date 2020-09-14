@@ -779,6 +779,9 @@ a{
     .swiper-button-prev,.swiper-button-next{
         top: 50%;
     }
+    .sub-text{
+        font-size: 18px;
+    }
   }
   @media(max-width:414px){
     .swiper-slide{
