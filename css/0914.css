@@ -490,22 +490,19 @@ a{
 }
 @media(max-width:1119px){
     .content-box{
-        width: 100%;
+        width: 90%;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         margin: 0 auto;
     }
     .container img {
-        width: 90%;
-        height: 450px;
-    }
-    .container {
         width: 80%;
+        height: 450px;
     }
     .overlay{
         top: 83%;
-        width: 90%;
+        width: 80%;
     }
     .container:hover .overlay{
         top: 0;
@@ -597,7 +594,6 @@ a{
     margin-bottom: 5%;
 }
 .swiper-button-prev,.swiper-button-next{
-    margin-top: -50px;
     color: #fff;
 }
 .swiper-pagination-bullet{
@@ -721,21 +717,6 @@ a{
       color: #fff;
   }
 
-  @media(max-width: 1119px){
-    .swiper-container {
-        width: 96%;
-        height: 400px;
-        padding-top: 100px;  
-    }
-    .swiper-pagination{
-        margin-bottom: 0;
-    }
-  }
-  @media(max-width: 767px){
-    .swiper-container {
-        width: 100%;
-        height: 300px;
-  }
   /* <!---------------------- section04 end ----------------------> */
 
 
