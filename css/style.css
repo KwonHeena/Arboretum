@@ -780,6 +780,16 @@ a{
         top: 50%;
     }
   }
+  @media(max-width:414px){
+    .swiper-slide img{
+        width: 100%;
+        height: 90%;
+        background-size: contain;
+        background-color: rgba(0, 0, 0, 1);
+    }
+
+  }
+
   /* <!---------------------- section04 end ----------------------> */
 
 
