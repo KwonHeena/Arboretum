@@ -480,6 +480,11 @@ a{
         line-height: 25px;
     }
 }
+@media(max-width:1420px){
+    .sec03-txt{
+        font-size: 19px;
+    }
+}
 @media(max-width:1343px){
     .sec03-text{
         font-size: 25px;
