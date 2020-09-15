@@ -68,14 +68,17 @@ new WOW().init();
     breakpoints: {
         640: {
             slidesPerView: 2,
+            slidesPerGroup: 1,
             spaceBetween: 20,
         },
         767: {
             slidesPerView: 3,
+            slidesPerGroup: 3,
             spaceBetween: 30,
         },
         1024: {
             slidesPerView: 3,
+            slidesPerGroup: 3,
             spaceBetween: 30,
         },   
     },
