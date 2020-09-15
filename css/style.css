@@ -898,6 +898,7 @@ footer{
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top center;
+    padding-top: 2%;
 }
 .inner05{
     width: 80%;
