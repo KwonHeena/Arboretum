@@ -54,7 +54,7 @@ new WOW().init();
  var swiper = new Swiper('.swiper-container', {
     slidesPerView: 2,
     spaceBetween: 10,
-    slidesPerGroup: 3,
+    slidesPerGroup: 1,
     loop: true,
     loopFillGroupWithBlank: true,
     pagination: {
