@@ -768,10 +768,10 @@ a{
   }
   @media(max-width:500px){
     .modal-con .con img{
-        width: 98%;
+        width: 100%;
     }
     .modal-con{
-      width: 98%;
+      width: 100%;
     }
     .swiper-pagination{
         margin-bottom: -2%;
@@ -781,6 +781,10 @@ a{
     }
     .sub-text{
         font-size: 18px;
+    }
+    .swiper-slide {
+        width: 300px;
+        margin-right: 0px;
     }
   }
   @media(max-width:414px){
