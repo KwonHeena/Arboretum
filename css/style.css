@@ -370,6 +370,9 @@ a{
     #section02{
         padding: 0;
     }
+    .inner02{
+        padding-top: 20px;   
+    }
     .name{
         font-size: 25px;
         margin-top: 20px;
@@ -380,7 +383,7 @@ a{
     }
     .section02-img img{
         width: 400px;
-        margin-top: 70px;
+        margin-top: 0;
     }
     .section02-txt{
         padding-bottom: 0px;
@@ -389,6 +392,11 @@ a{
 }
 
 @media(max-width:414px){
+    #section02{
+        height: auto;
+        padding-bottom: 100px;
+        padding-top: 60px;
+    }
     .name{
         font-size: 25px;
     }
@@ -397,17 +405,16 @@ a{
     }
     .section02-img img{
         width: 350px;
-        padding-top: -20px;
+        padding-top: 50px;
     }
     .section02-txt{
         width: 100%;
-        padding: 0;
+        padding-top: 30px;
         padding-bottom: -20px;
     }
     .inner02{
-        flex-direction: column;   
         padding-top: 20px;   
-        padding-bottom: 40px;
+        padding-bottom: 0px;
         height: auto;
     }
 }
