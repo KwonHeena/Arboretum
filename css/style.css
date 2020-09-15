@@ -625,7 +625,7 @@ a{
 
 #section04{
     width: 100%;
-    height: 100%;
+    height: 100vh;
     background: url(../images/section04-bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -834,12 +834,6 @@ a{
     }
     .modal-open{
         height: 100%;
-    }
-    .swiper-slide img{
-        width: 100%;
-        height: 100%;
-        background-size: contain;
-        background-color: rgba(0, 0, 0, 1);
     }
     .swiper-button-prev,.swiper-button-next{
         top: 47%;
