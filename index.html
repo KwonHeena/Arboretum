@@ -6,20 +6,23 @@
     <title>벽초지수목원</title>
     <!-- jauery -->
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <!-- swiper css -->
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <!-- wow css -->
     <script src="js/wow.min.js"></script>
     <link rel="stylesheet" href="css/animate.css">
-    <!-- modal css -->
+    <!-- swiper css -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- modal js -->
     <script src=js/modal.js></script>
     <!-- EXicon -->
     <link rel="stylesheet" href="http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <!-- Map -->
+    <script type="text/javascript" src="http://dapi.kakao.com/v2/maps/sdk.js?appkey=0c6e61f1e0d4302780a6129ed6585c05"></script>
     <!-- css -->
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
     <style>
+    /* Map style */
     .customoverlay {position:relative;bottom:85px;border-radius:6px;border: 1px solid #ccc;border-bottom:2px solid #ddd;float:left;}
     .customoverlay:nth-of-type(n) {border:0; box-shadow:0px 1px 2px #888;}
     .customoverlay a {display:block;text-decoration:none;color:#000;text-align:center;border-radius:6px;font-size:14px;font-weight:bold;overflow:hidden;background: #d95050;background: #d95050 url(https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/arrow_white.png) no-repeat right 14px center;}
@@ -28,6 +31,7 @@
     </style>
 </head>
 <body>
+    <!-- section02 -->
     <div id="section01">
         <div class="menu">
             <div class="menu-inner">
@@ -52,56 +56,7 @@
             </div>
         </div>
     </div>
-
-    <script>
-        // 디바이스 크기가 작아지면 메뉴를 토글방식으로 변경
-        $(function(){
-            $(".g-btn").click(function(){
-                $(".menu li a").slideToggle();
-            });
-        });
-
-        /**스크롤이 설정한 높이 이상 내려갔을때 스타일추가하기**/
-        if (jQuery(window).width() > 0) {
-        jQuery(window).on("scroll",function(ev){
-        if(jQuery(window).scrollTop() > 150 ) { /**높이 픽셀 조정**/
-            jQuery('.menu').addClass('fixed');  /**위의 높이에서 .fixed 클래스를 추가합니다. 스타일에서 자유롭게 수치 조절 가능합니다.**/
-        }
-        else{
-			jQuery('.menu').removeClass('fixed');
-        }
-        return false;
-    });
-	}
-        /**마우스 부드럽게 해당위치로 이동**/
-	    $(function(){
-        $(".menu0").click(function(){
-        var offset = $("#section01").offset();
-        $("html,body").animate({scrollTop : offset.top}, 800);
-        });
-        $(".menu1").click(function(){
-            var offset = $("#section01").offset();
-            $("html,body").animate({scrollTop : offset.top}, 800);
-        });
-        $(".menu2").click(function(){
-            var offset = $("#section02").offset();
-            $("html,body").animate({scrollTop : offset.top}, 800);
-        }); 
-        $(".menu3").click(function(){
-            var offset = $("#section03").offset();
-            $("html,body").animate({scrollTop : offset.top}, 800);
-        }); 
-        $(".menu4").click(function(){
-            var offset = $("#section04").offset();
-            $("html,body").animate({scrollTop : offset.top}, 800);
-        }); 
-        $(".menu5").click(function(){
-            var offset = $("#section05").offset();
-            $("html,body").animate({scrollTop : offset.top}, 800);
-        }); 
-    });
-    </script>
-    <!---------------------- section01 end ---------------------->
+<!---------------------- section01 end ---------------------->
     <!-- section02 -->
     <div id="section02">
         <div class="inner02">
@@ -117,195 +72,149 @@
             </div>
         </div>
     </div>
-<script>
-     new WOW().init();
-</script>
 <!---------------------- section02 end ---------------------->
-<div id="section03">
-    <div class="content">
-        <div class="text">
-            <p class="sec-text">관람안내</p>
-            <p class="bar"></p>
-        </div>
-        <div class="content-box">
-            <div class="container images">
-                <img src="images/section-03-img1.png" alt="">
-                <div class="overlay">
-                    <div class="sec03-text">설렘의공간</div>
-                    <p class="sec03-txt">수목원을 들어가면서부터 펼쳐지는 꽃들의 향연<br>흑현무암 화단에 어우러진 교목, 관목들을<br>세계의 꽃들과 함께 계절에 따라<br>색다르게 감상할 수 있는 공간</p>
+    <!-- section03 -->
+    <div id="section03">
+        <div class="content">
+            <div class="text">
+                <p class="sec-text">관람안내</p>
+                <p class="bar"></p>
+            </div>
+            <div class="content-box">
+                <div class="container images">
+                    <img src="images/section-03-img1.png" alt="">
+                    <div class="overlay">
+                        <div class="sec03-text">설렘의공간</div>
+                        <p class="sec03-txt">수목원을 들어가면서부터 펼쳐지는 꽃들의 향연<br>흑현무암 화단에 어우러진 교목, 관목들을<br>세계의 꽃들과 함께 계절에 따라<br>색다르게 감상할 수 있는 공간</p>
+                    </div>
+                </div>
+                <div class="container images">
+                    <img src="images/section-03-img2.png" alt="">
+                    <div class="overlay">
+                        <div class="sec03-text">신화의공간</div>
+                        <p class="sec03-txt">웅장한 말리성의 문을 지나면서 시작되는<br>유럽의 영웅들과 신화의 이야기를<br>자연의 이름으로  풀어낸 서양적인 아름다움이<br>깃들어져 있는 공간</p>
+                    </div>
+                </div>
+                <div class="container images">
+                    <img src="images/section-03-img3.png" alt="">
+                    <div class="overlay">
+                        <div class="sec03-text">모험의공간</div>
+                        <p class="sec03-txt">숲과 탐험 그리고 놀이를 주제로 만들어진<br>친환경 자연속 모험공간으로<br>아이들에게 즐거운 자연학습을<br>자연스럽게 익히게 해주고<br>어른들은 동심의 세계로 빠질 수 있는 놀이공간</p>
+                    </div>
                 </div>
             </div>
-            <div class="container images">
-                <img src="images/section-03-img2.png" alt="">
-                <div class="overlay">
-                    <div class="sec03-text">신화의공간</div>
-                    <p class="sec03-txt">웅장한 말리성의 문을 지나면서 시작되는<br>유럽의 영웅들과 신화의 이야기를<br>자연의 이름으로  풀어낸 서양적인 아름다움이<br>깃들어져 있는 공간</p>
+            <div class="content-box">
+                <div class="container images">
+                    <img src="images/section-03-img4.png" alt="">
+                    <div class="overlay">
+                        <div class="sec03-text">자유의공간</div>
+                        <p class="sec03-txt">인류의 평화를 기원하는 뜻에서 만들어진 공간<br>평화의 수도인 파주를 축복하기 위한 곳으로<br>야생화와 관목,교목들이 심겨진 산책로와<br>광활한 잔디광장을 걸을 수 있는 공간</p>
+                    </div>
                 </div>
-            </div>
-            <div class="container images">
-                <img src="images/section-03-img3.png" alt="">
-                <div class="overlay">
-                    <div class="sec03-text">모험의공간</div>
-                    <p class="sec03-txt">숲과 탐험 그리고 놀이를 주제로 만들어진<br>친환경 자연속 모험공간으로<br>아이들에게 즐거운 자연학습을<br>자연스럽게 익히게 해주고<br>어른들은 동심의 세계로 빠질 수 있는 놀이공간</p>
+                <div class="container images">
+                    <img src="images/section-03-img5.png" alt="">
+                    <div class="overlay">
+                        <div class="sec03-text">사색의공간</div>
+                        <p class="sec03-txt">운치가 있는 나무그늘, 그늘 사이로 드리워진<br>빛줄기, 푸른 이끼 사이로 흘러가는 물,<br>그리고 맑은 공기. 자연이 인간에게 주는<br>소박한 선물들에 취해 바쁜 일상에서 벗어나<br>낭만적인 사색에 잠기는 공간</p>
+                    </div>
                 </div>
-            </div>
-        </div>
-        <div class="content-box">
-            <div class="container images">
-                <img src="images/section-03-img4.png" alt="">
-                <div class="overlay">
-                    <div class="sec03-text">자유의공간</div>
-                    <p class="sec03-txt">인류의 평화를 기원하는 뜻에서 만들어진 공간<br>평화의 수도인 파주를 축복하기 위한 곳으로<br>야생화와 관목,교목들이 심겨진 산책로와<br>광활한 잔디광장을 걸을 수 있는 공간</p>
-                </div>
-            </div>
-            <div class="container images">
-                <img src="images/section-03-img5.png" alt="">
-                <div class="overlay">
-                    <div class="sec03-text">사색의공간</div>
-                    <p class="sec03-txt">운치가 있는 나무그늘, 그늘 사이로 드리워진<br>빛줄기, 푸른 이끼 사이로 흘러가는 물,<br>그리고 맑은 공기. 자연이 인간에게 주는<br>소박한 선물들에 취해 바쁜 일상에서 벗어나<br>낭만적인 사색에 잠기는 공간</p>
-                </div>
-            </div>
-            <div class="container images">
-                <img src="images/section-03-img6.png" alt="">
-                <div class="overlay">
-                    <div class="sec03-text">감동의공간</div>
-                    <p class="sec03-txt">비움의 길 끝에 펼쳐지는 벽초지의 감동<br>동양적인 아름다움이 깃들어져 있는 공간으로<br>봄,여름,가을,겨울 새로운 모습들이<br>동양의 '지베르니 정원'이라고 불릴만큼<br>비현실적인 경치를 감상할 수 있는 공간</p>
+                <div class="container images">
+                    <img src="images/section-03-img6.png" alt="">
+                    <div class="overlay">
+                        <div class="sec03-text">감동의공간</div>
+                        <p class="sec03-txt">비움의 길 끝에 펼쳐지는 벽초지의 감동<br>동양적인 아름다움이 깃들어져 있는 공간으로<br>봄,여름,가을,겨울 새로운 모습들이<br>동양의 '지베르니 정원'이라고 불릴만큼<br>비현실적인 경치를 감상할 수 있는 공간</p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-
 <!---------------------- section03 end ---------------------->
-<div id="section04">
-    <div class="text">
-        <p class="sec-text">갤러리</p>
-        <p class="bar"></p>
-        <p class="sub-text">사진을 클릭해 벽초지의 더 많은 일상을 감상하세요</p>
-    </div>
-    <div class="swiper-container">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide"><a href="javascript:openModal('modal1');" class="button modal-open"><img src="images/content1.jpg" alt=""></a></div>
-            <div class="swiper-slide"><a href="javascript:openModal('modal2');" class="button modal-open"><img src="images/content2.jpg" alt=""></a></div>
-            <div class="swiper-slide"><a href="javascript:openModal('modal3');" class="button modal-open"><img src="images/content3.jpg" alt=""></a></div>
-            <div class="swiper-slide"><a href="javascript:openModal('modal4');" class="button modal-open"><img src="images/content4.jpg" alt=""></a></div>
-            <div class="swiper-slide"><a href="javascript:openModal('modal5');" class="button modal-open"><img src="images/content5.jpg" alt=""></a></div>
-            <div class="swiper-slide"><a href="javascript:openModal('modal6');" class="button modal-open"><img src="images/content6.jpg" alt=""></a></div>
-            <div class="swiper-slide"><a href="javascript:openModal('modal7');" class="button modal-open"><img src="images/content7.jpg" alt=""></a></div>
-            <div class="swiper-slide"><a href="javascript:openModal('modal8');" class="button modal-open"><img src="images/content8.jpg" alt=""></a></div>
-            <div class="swiper-slide"><a href="javascript:openModal('modal9');" class="button modal-open"><img src="images/content9.jpg" alt=""></a></div>
+    <!-- section04 -->
+    <div id="section04">
+        <div class="text">
+            <p class="sec-text">갤러리</p>
+            <p class="bar"></p>
+            <p class="sub-text">벽초지의 더 많은 일상을 감상해 보세요<br><span><사진을 클릭하세요></span></p>
         </div>
-        <!-- Add Pagination -->
-        <div class="swiper-pagination"></div>
-        <!-- Add Arrows -->
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-    </div>
-</div>
-<script>
-    var swiper = new Swiper('.swiper-container', {
-        slidesPerView: 2,
-        spaceBetween: 10,
-        slidesPerGroup: 3,
-        loop: true,
-        loopFillGroupWithBlank: true,
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-        breakpoints: {
-            640: {
-                slidesPerView: 2,
-                spaceBetween: 20,
-            },
-            767: {
-                slidesPerView: 3,
-                spaceBetween: 30,
-            },
-            1024: {
-                slidesPerView: 3,
-                spaceBetween: 30,
-            },   
-        },
-    });
-</script>
-<div id="modal">
-    <div class="modal-con modal1">
-        <a href="javascript:;" class="close xi-close-square-o"></a>
-        <div class="con">
-            <img src="images/content1.jpg" alt="">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><a href="javascript:openModal('modal1');" class="button modal-open"><img src="images/content1.jpg" alt=""></a></div>
+                <div class="swiper-slide"><a href="javascript:openModal('modal2');" class="button modal-open"><img src="images/content2.jpg" alt=""></a></div>
+                <div class="swiper-slide"><a href="javascript:openModal('modal3');" class="button modal-open"><img src="images/content3.jpg" alt=""></a></div>
+                <div class="swiper-slide"><a href="javascript:openModal('modal4');" class="button modal-open"><img src="images/content4.jpg" alt=""></a></div>
+                <div class="swiper-slide"><a href="javascript:openModal('modal5');" class="button modal-open"><img src="images/content5.jpg" alt=""></a></div>
+                <div class="swiper-slide"><a href="javascript:openModal('modal6');" class="button modal-open"><img src="images/content6.jpg" alt=""></a></div>
+                <div class="swiper-slide"><a href="javascript:openModal('modal7');" class="button modal-open"><img src="images/content7.jpg" alt=""></a></div>
+                <div class="swiper-slide"><a href="javascript:openModal('modal8');" class="button modal-open"><img src="images/content8.jpg" alt=""></a></div>
+                <div class="swiper-slide"><a href="javascript:openModal('modal9');" class="button modal-open"><img src="images/content9.jpg" alt=""></a></div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- Add Arrows -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
         </div>
     </div>
-    <div class="modal-con modal2">
-        <a href="javascript:;" class="close xi-close-square-o"></a>
-        <div class="con">
-            <img src="images/content2.jpg" alt="">
+    <!-- Modal -->
+    <div id="modal">
+        <div class="modal-con modal1">
+            <a href="javascript:;" class="close xi-close-square-o"></a>
+            <div class="con">
+                <img src="images/content1.jpg" alt="">
+            </div>
+        </div>
+        <div class="modal-con modal2">
+            <a href="javascript:;" class="close xi-close-square-o"></a>
+            <div class="con">
+                <img src="images/content2.jpg" alt="">
+            </div>
+        </div>
+        <div class="modal-con modal3">
+            <a href="javascript:;" class="close xi-close-square-o"></a>
+            <div class="con">
+                <img src="images/content3.jpg" alt="">
+            </div>
+        </div>
+        <div class="modal-con modal4">
+            <a href="javascript:;" class="close xi-close-square-o"></a>
+            <div class="con">
+                <img src="images/content4.jpg" alt="">
+            </div>
+        </div>
+        <div class="modal-con modal5">
+            <a href="javascript:;" class="close xi-close-square-o"></a>
+            <div class="con">
+                <img src="images/content5.jpg" alt="">
+            </div>
+        </div>
+        <div class="modal-con modal6">
+            <a href="javascript:;" class="close xi-close-square-o"></a>
+            <div class="con">
+                <img src="images/content6.jpg" alt="">
+            </div>
+        </div>
+        <div class="modal-con modal7">
+            <a href="javascript:;" class="close xi-close-square-o"></a>
+            <div class="con">
+                <img src="images/content7.jpg" alt="">
+            </div>
+        </div>
+        <div class="modal-con modal8">
+            <a href="javascript:;" class="close xi-close-square-o"></a>
+            <div class="con">
+                <img src="images/content8.jpg" alt="">
+            </div>
+        </div>
+        <div class="modal-con modal9">
+            <a href="javascript:;" class="close xi-close-square-o"></a>
+            <div class="con">
+                <img src="images/content9.jpg" alt="">
+            </div>
         </div>
     </div>
-    <div class="modal-con modal3">
-        <a href="javascript:;" class="close xi-close-square-o"></a>
-        <div class="con">
-            <img src="images/content3.jpg" alt="">
-        </div>
-    </div>
-    <div class="modal-con modal4">
-        <a href="javascript:;" class="close xi-close-square-o"></a>
-        <div class="con">
-            <img src="images/content4.jpg" alt="">
-        </div>
-    </div>
-    <div class="modal-con modal5">
-        <a href="javascript:;" class="close xi-close-square-o"></a>
-        <div class="con">
-            <img src="images/content5.jpg" alt="">
-        </div>
-    </div>
-    <div class="modal-con modal6">
-        <a href="javascript:;" class="close xi-close-square-o"></a>
-        <div class="con">
-            <img src="images/content6.jpg" alt="">
-        </div>
-    </div>
-    <div class="modal-con modal7">
-        <a href="javascript:;" class="close xi-close-square-o"></a>
-        <div class="con">
-            <img src="images/content7.jpg" alt="">
-        </div>
-    </div>
-    <div class="modal-con modal8">
-        <a href="javascript:;" class="close xi-close-square-o"></a>
-        <div class="con">
-            <img src="images/content8.jpg" alt="">
-        </div>
-    </div>
-    <div class="modal-con modal9">
-        <a href="javascript:;" class="close xi-close-square-o"></a>
-        <div class="con">
-            <img src="images/content9.jpg" alt="">
-        </div>
-    </div>
-</div>
-       
-<script>
-    function openModal(modalname){
-        document.get
-        $("#modal").fadeIn(300);
-        $("."+modalname).fadeIn(300);
-    }
-    
-    $("#modal, .close").on('click',function(){
-        $("#modal").fadeOut(300);
-        $(".modal-con").fadeOut(300);
-    });
-</script>
-    
-      <!---------------------- section04 end ---------------------->
-
-      <div id="section05">
+<!---------------------- section04 end ---------------------->
+    <!-- section05 -->
+    <div id="section05">
         <div class="text">
             <p class="sec-text">오시는길</p>
             <p class="bar"></p>
@@ -334,7 +243,8 @@
             </div>
         </div>
     </div>
-    <!---------------------- section05 end ---------------------->
+<!---------------------- section05 end ---------------------->
+    <!-- footer -->
     <footer>
         <div class="foot-inner">
             <p class="visit">수목원 문의 | Visitor Info. : 031.957.2004 <br>
@@ -342,56 +252,8 @@
             <p class="copy">Copyright © byukchoji gardens. All rights reserved.</p>
         </div>
     </footer>
-    
-    
-    <!---------------------- footer end ---------------------->
-    
-    <script type="text/javascript" src="http://dapi.kakao.com/v2/maps/sdk.js?appkey=0c6e61f1e0d4302780a6129ed6585c05">
-    </script>
-    
-    <script type="text/javascript">
-        var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
-        mapOption = { 
-            center: new kakao.maps.LatLng(37.801547, 126.874017), // 지도의 중심좌표
-            level: 4 // 지도의 확대 레벨
-        };
-    
-        var map = new kakao.maps.Map(mapContainer, mapOption);
-    
-        var imageSrc = 'images/logo1.png', // 마커이미지의 주소입니다    
-        imageSize = new kakao.maps.Size(30, 50), // 마커이미지의 크기입니다
-        imageOption = {offset: new kakao.maps.Point(16, 65)}; // 마커이미지의 옵션입니다. 마커의 좌표와 일치시킬 이미지 안에서의 좌표를 설정합니다.
-    
-        // 마커의 이미지정보를 가지고 있는 마커이미지를 생성합니다
-        var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize, imageOption),
-        markerPosition = new kakao.maps.LatLng(37.801547, 126.874017); // 마커가 표시될 위치입니다
-    
-        // 마커를 생성합니다
-        var marker = new kakao.maps.Marker({
-        position: markerPosition,
-        image: markerImage // 마커이미지 설정 
-        });
-    
-        // 마커가 지도 위에 표시되도록 설정합니다
-        marker.setMap(map);  
-    
-        // 커스텀 오버레이에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
-        var content = '<div class="customoverlay">' +
-        '  <a href="https://map.kakao.com/?map_type=TYPE_MAP&itemId=7892614" target="_blank">' +
-        '    <span class="sec05-title">벽초지수목원</span>' +
-        '  </a>' +
-        '</div>';
-    
-        // 커스텀 오버레이가 표시될 위치입니다 
-        var position = new kakao.maps.LatLng(37.801547, 126.874017);  
-    
-        // 커스텀 오버레이를 생성합니다
-        var customOverlay = new kakao.maps.CustomOverlay({
-        map: map,
-        position: position,
-        content: content,
-        yAnchor: 1 
-        });
-    </script>
+<!---------------------- footer end ---------------------->
+<!-- main js -->
+<script src="js/main.js"></script>
 </body>
 </html>
