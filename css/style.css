@@ -764,10 +764,10 @@ a{
   }
   @media(max-width:500px){
     .modal-con .con img{
-        width: 100%;
+        width: 98%;
     }
     .modal-con{
-      width: 100%;
+      width: 96%;
     }
     .swiper-pagination{
         margin-bottom: -2%;
