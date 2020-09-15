@@ -208,11 +208,10 @@ a{
         border: none;
         background: none;
     }
-    .g-btn img{
-        width: 20px;
+    .xi-bars{
+        font-size: 30px;
         position: relative;
         left: 25px;
-        top: 3px;
     }
     .logo{
         display: none;
@@ -222,6 +221,7 @@ a{
     }
     .menu-inner ul {
         width: 100%;
+        margin-top: 7px;
     }
     li{
         margin-left: 10px;
